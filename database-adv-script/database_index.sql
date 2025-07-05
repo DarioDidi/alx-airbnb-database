@@ -1,3 +1,11 @@
+-- Before indexing
+EXPLAIN ANALYZE 
+SELECT * FROM Property 
+WHERE location LIKE '%New York%' 
+AND pricepernight BETWEEN 100 AND 200
+ORDER BY pricepernight;
+
+
 -- database_index.sql
 -- User table indexes
 CREATE INDEX idx_user_email ON User(email);
@@ -21,3 +29,11 @@ CREATE INDEX idx_review_rating ON Review(rating);
 
 -- Payment table indexes
 CREATE INDEX idx_payment_booking ON Payment(booking_id);
+
+
+-- After indexing
+EXPLAIN ANALYZE 
+SELECT * FROM Property 
+WHERE location LIKE '%New York%' 
+AND pricepernight BETWEEN 100 AND 200
+ORDER BY pricepernight;
