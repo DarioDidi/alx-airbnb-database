@@ -3,6 +3,7 @@ use airbnb_original;
 SELECT * FROM Booking
 INNER JOIN User 
 ON User.user_id = Booking.user_id;
+ORDER BY User.user_id;
 -- Write a query using aLEFT JOIN to retrieve all properties and their reviews, including properties that have no reviews.
 SELECT * FROM Property
 LEFT JOIN Review
