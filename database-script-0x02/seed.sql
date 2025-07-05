@@ -1,3 +1,4 @@
+USE airbnb_original;
 -- Seed Users
 INSERT INTO User (user_id, first_name, last_name, email, password_hash, phone_number, role) VALUES
 ('11111111-1111-1111-1111-111111111111', 'John', 'Doe', 'john.doe@example.com', '$2a$10$xJwL5v5Jz5UZJz5UZJz5Ue', '+1234567890', 'guest'),
